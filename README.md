@@ -43,8 +43,8 @@ Control the I/O (like a lamp through a relay) pin of Raspberry Pi from a Client-
     ```bash
     $ python client.py -s OPTION
     ```
-
-    ~ *OPTION* can be: **on**, **off** or **exit**
+    Note 1: *OPTION* can be: **on**, **off** or **exit**;
+    Note 2: Opening `client.py`, you can change Raspberry MAC address or uncomment some lines to search new devices 
 
 ---
 
