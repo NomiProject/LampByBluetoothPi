@@ -31,6 +31,9 @@ client_socket = bt.BluetoothSocket(bt.RFCOMM)
 client_socket.connect((raspBluetoothMac, 3))
 client_socket.send(options["send"])
 
+if options["send"] != "on" or "off":
+    print("Desligando servidor Bluetooth!")
+
 #print ("Opção [%s] enviada com sucesso!" % options["send"])
 
 client_socket.close()

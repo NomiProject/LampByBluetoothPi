@@ -21,8 +21,10 @@ while True:
         data = client_socket.recv(1024)
         if data == "on":
             GPIO.output(RaspberryPin, True)
+            print("Ativando pino %d" % RaspberryPin)
         elif data == "off":
             GPIO.output(RaspberryPin, False)
+            print("Desativando pino %d" % RaspberryPin)
         else:
             break
         client_socket.close()
