@@ -36,15 +36,15 @@ Control the I/O (like a lamp through a relay) pin of Raspberry Pi from a Client-
     $ python server.py
     ```
 
-    Note: Opening `server.py`, you can change GPIO pin
+    - Note: Opening `server.py`, you can change GPIO pin
 
 2. **In your PC**, with bluetooth enabled, run:
 
     ```bash
     $ python client.py -s OPTION
     ```
-    Note 1: *OPTION* can be: **on**, **off** or **exit**;
-    Note 2: Opening `client.py`, you can change Raspberry MAC address or uncomment some lines to search new devices 
+    - Note 1: *OPTION* can be: **on**, **off** or **exit**;
+    - Note 2: Opening `client.py`, you can change Raspberry MAC address or uncomment some lines to search new devices 
 
 ---
 
