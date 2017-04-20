@@ -11,8 +11,7 @@ Control the I/O (like a lamp through a relay) pin of Raspberry Pi from a Client-
 2. **Raspberry Pi 3 Model B**
     Learn more about [RasberryPi project](https://www.raspberrypi.org/).
 
-3. **PyBluez and Bluetooth hardware support**
-    In your RaspberryPi and PC (Debian-like), you might run:
+3. **PyBluez and Bluetooth support**
     ```bash
     sudo apt-get install python-pip python-dev ipython bluetooth libbluetooth-dev
     ```
