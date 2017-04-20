@@ -9,7 +9,7 @@ server_socket= bt.BluetoothSocket(bt.RFCOMM)
 server_socket.bind(("", 3))
 server_socket.listen(1)
 
-client_sock, client_info = bt.server_sock.accept()
+client_sock, client_info = server_socket.accept()
 
 try:
     while True:
