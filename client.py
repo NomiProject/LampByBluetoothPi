@@ -25,7 +25,7 @@ if raspBluetoothMac is None:
     exit()
 '''
 
-print("Raspberry MAC %s" % raspBluetoothMac)
+print("Conectado com sucesso ao endereço %s" % raspBluetoothMac)
     
 client_socket = bt.BluetoothSocket(bt.RFCOMM)
 client_socket.connect((raspBluetoothMac, 3))
