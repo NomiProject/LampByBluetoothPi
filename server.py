@@ -15,10 +15,9 @@ server_socket= bt.BluetoothSocket(bt.RFCOMM)
 server_socket.bind(("", 3))
 server_socket.listen(1)
 
-client_socket, client_info = server_socket.accept()
-
 while True:
     try:
+        client_socket, client_info = server_socket.accept()
         data = client_socket.recv(1024)
         if data == "on":
             GPIO.output(RaspberryPin, True)
@@ -26,10 +25,9 @@ while True:
             GPIO.output(RaspberryPin, False)
         else:
             break
+        client_socket.close()
     except IOError:
         break
     
 print("Serviço Encerrado")
-
-client_socket.close()
 server_socket.close()
