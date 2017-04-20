@@ -9,18 +9,15 @@ server_socket= bt.BluetoothSocket(bt.RFCOMM)
 server_socket.bind(("", 3))
 server_socket.listen(1)
 
-client_sock, client_info = server_socket.accept()
+client_socket, client_info = server_socket.accept()
 
 try:
     while True:
-        data = client_sock.recv(1024)
+        data = client_socket.recv(1024)
         if len(data) == 0: break
         print("received [%s]" % data)
 except IOError:
     pass
-
-
-
 
 client_socket.close()
 server_socket.close()

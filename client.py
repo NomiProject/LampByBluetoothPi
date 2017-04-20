@@ -7,9 +7,9 @@ import bluetooth as bt
 
 print("Procurando RaspberryPI...")
 rasbBluetoothName = "raspberrypi"
-raspBluetoothMac = None
+raspBluetoothMac = "B8:27:EB:76:C1:C3"
 
-
+'''
 for addr, name in bt.discover_devices(lookup_names=True):
     if name == rasbBluetoothName:
         raspBluetoothMac = addr
@@ -18,6 +18,7 @@ for addr, name in bt.discover_devices(lookup_names=True):
 if raspBluetoothMac is None:
     print("Não foi possível localizar nenhum Raspberry!")
     exit()
+'''
 
 print("Raspberry MAC %s" % raspBluetoothMac)
     
