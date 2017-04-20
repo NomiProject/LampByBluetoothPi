@@ -2,8 +2,13 @@
 # -*- coding: utf-8 -*-
 # By Allex Lima <allexlima@unn.edu.br> | www.allexlima.com
 
-
+import argparse
 import bluetooth as bt
+
+
+cli = argparse.ArgumentParser()
+cli.add_argument("-s", "--send", type=str, help="Send 'on', 'off' or 'exit'")
+options = vars(cli.parse_args())
 
 print("Procurando RaspberryPI...")
 rasbBluetoothName = "raspberrypi"
@@ -22,12 +27,11 @@ if raspBluetoothMac is None:
 
 print("Raspberry MAC %s" % raspBluetoothMac)
     
-
 client_socket = bt.BluetoothSocket(bt.RFCOMM)
 client_socket.connect((raspBluetoothMac, 3))
-client_socket.send("Hello World")
+client_socket.send(options["send"])
 
-print ("Finished")
+print ("Opção [%s] enviada com sucesso!" % options["send"])
 
 client_socket.close()
     
