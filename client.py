@@ -22,7 +22,7 @@ if raspBluetoothMac is None:
 print("Raspberry MAC %s" % raspBluetoothMac)
     
 
-client_socket = bt.BluetoothSocket(RFCOMM)
+client_socket = bt.BluetoothSocket(bt.RFCOMM)
 client_socket.connect((raspBluetoothMac, 3))
 client_socket.send("Hello World")
 
